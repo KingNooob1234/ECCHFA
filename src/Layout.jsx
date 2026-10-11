@@ -54,7 +54,7 @@ export default function Layout({ children, currentPageName }) {
             <h1 className="text-2xl font-bold tracking-tight">ECCHFA</h1>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1" aria-label="Primary">
+            <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
               {navItems.map((item) => {
                 const isActive = currentPageName === item.page;
                 return (
@@ -89,7 +89,7 @@ export default function Layout({ children, currentPageName }) {
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
-              className="md:hidden p-2.5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center"
+              className="sm:hidden p-2.5 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center"
               style={{ minHeight: 44, minWidth: 44 }}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -105,7 +105,7 @@ export default function Layout({ children, currentPageName }) {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-white/5 bg-[#18181b]/98 backdrop-blur-xl select-none"
+              className="sm:hidden border-t border-white/5 bg-[#18181b]/98 backdrop-blur-xl select-none"
             >
               <nav className="px-4 py-4 space-y-1" aria-label="Mobile">
                 {navItems.map((item) => {
@@ -140,8 +140,8 @@ export default function Layout({ children, currentPageName }) {
       {/* Main Content */}
       <main className="pt-20">
         {children}
-        {/* Spacer to clear the fixed mobile tab bar */}
-        <div className="md:hidden" style={{ height: 'calc(env(safe-area-inset-bottom) + 72px)' }} />
+        {/* Spacer to clear the fixed bottom tab bar (tablet widths only) */}
+        <div className="hidden sm:block lg:hidden" style={{ height: 'calc(env(safe-area-inset-bottom) + 72px)' }} />
       </main>
 
       {/* Footer */}

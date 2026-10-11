@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { listPlayers } from '@/data/players';
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { Users, User } from 'lucide-react';
@@ -14,12 +14,7 @@ export default function Players() {
 
   const { data: players = [], isLoading: playersLoading } = useQuery({
     queryKey: ['players'],
-    queryFn: () => base44.entities.Player.list('-updated_date', 100),
-  });
-
-  const { data: teams = [] } = useQuery({
-    queryKey: ['teams'],
-    queryFn: () => base44.entities.Team.list(),
+    queryFn: () => listPlayers('-updated_date', 100),
   });
 
   const filteredPlayers = players.filter(player => {

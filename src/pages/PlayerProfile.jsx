@@ -1,5 +1,5 @@
 import React from 'react';
-import { base44 } from '@/api/base44Client';
+import { getPlayer } from '@/data/players';
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { ArrowLeft, User, Target, Trophy, AlertCircle } from 'lucide-react';
@@ -13,7 +13,7 @@ export default function PlayerProfile() {
 
   const { data: player, isLoading } = useQuery({
     queryKey: ['player', playerId],
-    queryFn: () => base44.entities.Player.get(playerId),
+    queryFn: () => getPlayer(playerId),
     enabled: !!playerId,
   });
 

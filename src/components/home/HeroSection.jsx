@@ -6,7 +6,7 @@ import { createPageUrl } from '../../utils';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative flex-1 min-h-0 sm:flex-none sm:min-h-[90vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div 
@@ -38,7 +38,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-20">
         <div className="max-w-3xl">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}

@@ -10,7 +10,7 @@ const links = [
     description: 'Check the latest player rankings and ratings',
     icon: Trophy,
     page: 'Rankings',
-    gradient: 'from-[#0066FF] to-[#0044CC]',
+    gradient: 'from-[#16a34a] to-[#15803d]',
     image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80'
   },
   {
@@ -18,7 +18,7 @@ const links = [
     description: 'Explore detailed stats for all registered players',
     icon: Users,
     page: 'Players',
-    gradient: 'from-[#D4AF37] to-[#B8952D]',
+    gradient: 'from-[#15803d] to-[#166534]',
     image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&q=80'
   }
 ];
@@ -33,7 +33,7 @@ export default function QuickLinks() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">
             Quick Access
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto">

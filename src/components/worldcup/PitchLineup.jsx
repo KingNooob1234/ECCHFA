@@ -24,7 +24,7 @@ function PlayerDot({ player, playerId }) {
         </div>
         {player.captain && (
           <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#D4AF37] flex items-center justify-center shadow">
-            <span className="text-[#0a0e1a] text-[9px] font-black">C</span>
+            <span className="text-[#18181b] text-[9px] font-black">C</span>
           </div>
         )}
       </div>
@@ -69,8 +69,8 @@ export default function PitchLineup({ teamName, lineup, teamRating, logo }) {
         {logo && (
           <img src={logo} alt={teamName} className="w-7 h-7 object-contain flex-shrink-0" style={{ mixBlendMode: 'screen' }} />
         )}
-        <span className="text-slate-900 font-bold text-sm truncate">{teamName}</span>
-        <span className="ml-auto flex-shrink-0 text-xs font-black px-2 py-0.5 rounded-full bg-[#0066FF]/20 border border-[#0066FF]/40 text-[#60a5fa]">
+        <span className="text-slate-100 font-bold text-sm truncate">{teamName}</span>
+        <span className="ml-auto flex-shrink-0 text-xs font-black px-2 py-0.5 rounded-full bg-[#16a34a]/20 border border-[#16a34a]/40 text-[#4ade80]">
           {teamRating} OVR
         </span>
       </div>

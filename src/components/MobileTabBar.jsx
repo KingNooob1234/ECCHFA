@@ -24,7 +24,7 @@ export default function MobileTabBar() {
   return (
     <nav
       aria-label="Primary"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0a0e1a]/95 backdrop-blur-xl border-t border-white/10 select-none"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#18181b]/95 backdrop-blur-xl border-t border-white/10 select-none"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
       <div className="flex items-stretch justify-around">
@@ -39,12 +39,12 @@ export default function MobileTabBar() {
               aria-label={tab.name}
               aria-current={isActive ? 'page' : undefined}
               className={`relative flex flex-col items-center justify-center gap-1 flex-1 py-2 transition-colors ${
-                isActive ? 'text-slate-900' : 'text-white/60'
+                isActive ? 'text-slate-100' : 'text-white/60'
               }`}
               style={{ minHeight: 44 }}
             >
               {isActive && (
-                <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-8 rounded-full bg-gradient-to-r from-[#0066FF] to-[#D4AF37]" />
+                <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-8 rounded-full bg-gradient-to-r from-[#16a34a] to-[#22c55e]" />
               )}
               <Icon className="w-5 h-5" />
               <span className="text-[14px] font-medium leading-none">{tab.name}</span>

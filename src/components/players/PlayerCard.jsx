@@ -42,10 +42,10 @@ export default function PlayerCard({ player, index }) {
               <img 
                 src={player.photo_url} 
                 alt={player.name}
-                className="w-32 h-32 rounded-full object-cover border-4 border-[#0a0e1a] shadow-xl"
+                className="w-32 h-32 rounded-full object-cover border-4 border-[#18181b] shadow-xl"
               />
             ) : (
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#1a1f36] to-[#252b45] border-4 border-[#0a0e1a] flex items-center justify-center shadow-xl">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#242428] to-[#2e2e33] border-4 border-[#18181b] flex items-center justify-center shadow-xl">
                 <User className="w-12 h-12 text-slate-400" />
               </div>
             )}
@@ -54,7 +54,7 @@ export default function PlayerCard({ player, index }) {
 
         {/* Content */}
         <div className="pt-12 pb-6 px-6 text-center">
-          <h3 className="text-lg font-bold text-slate-900 mb-1">{player.name}</h3>
+          <h3 className="text-lg font-bold text-slate-100 mb-1">{player.name}</h3>
           {player.last_name && (
             <p className="text-sm text-white/60 mb-2">{player.last_name}</p>
           )}

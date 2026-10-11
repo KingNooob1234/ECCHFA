@@ -85,21 +85,21 @@ const getRatingBadgeStyle = (rating) => {
 const getPositionBadge = (position) => {
   if (position === 1) {
     return (
-      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#F0D060] flex items-center justify-center shadow-lg shadow-[#D4AF37]/50 text-xl font-black text-[#0a0e1a]">
+      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#F0D060] flex items-center justify-center shadow-lg shadow-[#D4AF37]/50 text-xl font-black text-[#18181b]">
         1
       </div>
     );
   }
   if (position === 2) {
     return (
-      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] flex items-center justify-center shadow-lg text-xl font-black text-[#0a0e1a]">
+      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] flex items-center justify-center shadow-lg text-xl font-black text-[#18181b]">
         2
       </div>
     );
   }
   if (position === 3) {
     return (
-      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#CD7F32] to-[#E0965A] flex items-center justify-center shadow-lg text-xl font-black text-[#0a0e1a]">
+      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#CD7F32] to-[#E0965A] flex items-center justify-center shadow-lg text-xl font-black text-[#18181b]">
         3
       </div>
     );
@@ -153,7 +153,7 @@ export default function PlayerRankingsTable({ players, isLoading }) {
     return (
       <div className="text-center py-20">
         <User className="w-16 h-16 text-white/20 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-slate-900 mb-2">No Players Ranked Yet</h3>
+        <h3 className="text-xl font-semibold text-slate-100 mb-2">No Players Ranked Yet</h3>
         <p className="text-white/50">Player rankings will appear here once added</p>
       </div>
     );
@@ -198,13 +198,13 @@ export default function PlayerRankingsTable({ players, isLoading }) {
                     className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-cover border-2 border-white/10 shrink-0"
                   />
                 ) : (
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#0066FF] to-[#0044CC] flex items-center justify-center border-2 border-white/10 shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#16a34a] to-[#15803d] flex items-center justify-center border-2 border-white/10 shrink-0">
                     <User className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                 )}
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1 min-w-0">
-                    <div className="font-bold text-slate-900 text-base sm:text-lg truncate min-w-0">{player.name}</div>
+                    <div className="font-bold text-slate-100 text-base sm:text-lg truncate min-w-0">{player.name}</div>
                     <RankChangeBadge change={RANK_CHANGES[player.name]} />
                   </div>
                   {player.position && (

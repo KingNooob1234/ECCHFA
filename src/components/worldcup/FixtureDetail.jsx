@@ -9,7 +9,7 @@ function teamColor(name, teams) {
 
 function Centerpoint({ event }) {
   if (event.type === 'sub') {
-    return <Repeat className="w-4 h-4 text-[#0066FF] shrink-0" />;
+    return <Repeat className="w-4 h-4 text-[#16a34a] shrink-0" />;
   }
 
   let bg = 'bg-white';
@@ -19,7 +19,7 @@ function Centerpoint({ event }) {
 
   return (
     <div className="relative shrink-0">
-      <div className={`w-3.5 h-3.5 rounded-full ${bg} ring-2 ring-[#0a0e1a] flex items-center justify-center`}>
+      <div className={`w-3.5 h-3.5 rounded-full ${bg} ring-2 ring-[#18181b] flex items-center justify-center`}>
         {event.type === 'penalty_goal' && (
           <span className="text-[8px] font-black text-black leading-none">P</span>
         )}
@@ -70,15 +70,15 @@ export default function FixtureDetail({ match, teams, onBack }) {
         <div className="flex-1 flex items-center justify-between gap-4 py-6 px-4">
           <div className="flex-1 flex flex-col items-center gap-3">
             <TeamLogo teamName={match.home} teams={teams} className="w-14 h-14" />
-            <span className="text-slate-900 font-bold text-sm sm:text-base text-center">{match.home}</span>
+            <span className="text-slate-100 font-bold text-sm sm:text-base text-center">{match.home}</span>
           </div>
           <div className="text-center px-4">
-            <span className="text-slate-900 font-black text-3xl sm:text-4xl">{match.score.home} – {match.score.away}</span>
+            <span className="text-slate-100 font-black text-3xl sm:text-4xl">{match.score.home} – {match.score.away}</span>
             <p className="text-white/40 text-xs mt-1">Full Time</p>
           </div>
           <div className="flex-1 flex flex-col items-center gap-3">
             <TeamLogo teamName={match.away} teams={teams} className="w-14 h-14" />
-            <span className="text-slate-900 font-bold text-sm sm:text-base text-center">{match.away}</span>
+            <span className="text-slate-100 font-bold text-sm sm:text-base text-center">{match.away}</span>
           </div>
         </div>
         <div className={`w-2 sm:w-3 bg-gradient-to-b ${awayColor}`} />
@@ -126,7 +126,7 @@ export default function FixtureDetail({ match, teams, onBack }) {
       {match.potm && (
         <div className="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-r from-[#D4AF37]/15 to-transparent border border-[#D4AF37]/30">
           <Star className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
-          <p className="text-sm text-slate-900">
+          <p className="text-sm text-slate-100">
             <span className="text-[#D4AF37] font-semibold">POTM:</span> {match.potm}
           </p>
         </div>
@@ -140,7 +140,7 @@ export default function FixtureDetail({ match, teams, onBack }) {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className={`w-3 h-3 rounded-full bg-gradient-to-br ${homeColor}`} />
-              <span className="text-slate-900 font-semibold text-xs">{match.home}</span>
+              <span className="text-slate-100 font-semibold text-xs">{match.home}</span>
             </div>
             <div className="space-y-2">
               {match.lineups.home.map((p, i) => (
@@ -148,7 +148,7 @@ export default function FixtureDetail({ match, teams, onBack }) {
                   <span className="text-white/80">{p.name}</span>
                   {p.captain && <span className="text-[#D4AF37] font-bold">(C)</span>}
                   {p.role === 'GK' && <span className="text-white/40">(GK)</span>}
-                  {p.sub && <Repeat className="w-3 h-3 text-[#0066FF]" />}
+                  {p.sub && <Repeat className="w-3 h-3 text-[#16a34a]" />}
                 </div>
               ))}
             </div>
@@ -157,7 +157,7 @@ export default function FixtureDetail({ match, teams, onBack }) {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className={`w-3 h-3 rounded-full bg-gradient-to-br ${awayColor}`} />
-              <span className="text-slate-900 font-semibold text-xs">{match.away}</span>
+              <span className="text-slate-100 font-semibold text-xs">{match.away}</span>
             </div>
             <div className="space-y-2">
               {match.lineups.away.map((p, i) => (
@@ -165,7 +165,7 @@ export default function FixtureDetail({ match, teams, onBack }) {
                   <span className="text-white/80">{p.name}</span>
                   {p.captain && <span className="text-[#D4AF37] font-bold">(C)</span>}
                   {p.role === 'GK' && <span className="text-white/40">(GK)</span>}
-                  {p.sub && <Repeat className="w-3 h-3 text-[#0066FF]" />}
+                  {p.sub && <Repeat className="w-3 h-3 text-[#16a34a]" />}
                 </div>
               ))}
             </div>

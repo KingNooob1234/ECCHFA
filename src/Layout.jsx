@@ -16,50 +16,42 @@ export default function Layout({ children, currentPageName }) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0e1a] text-slate-900">
+    <div className="min-h-screen bg-[#18181b] text-slate-100">
       <style>{`
         :root {
-          --navy: #1a1f36;
-          --navy-light: #252b45;
-          --accent-blue: #0066FF;
-          --gold: #D4AF37;
+          --space-gray: #242428;
+          --space-gray-light: #2e2e33;
+          --accent-green: #16a34a;
+          --accent-green-light: #22c55e;
         }
-        
+
         @keyframes shimmer {
           0% { background-position: -200% 0; }
           100% { background-position: 200% 0; }
         }
-        
+
         .gradient-text {
-          background: linear-gradient(135deg, #fff 0%, #D4AF37 50%, #fff 100%);
+          background: linear-gradient(135deg, #fff 0%, #22c55e 50%, #fff 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
-        
+
         .nav-glow:hover {
-          text-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+          text-shadow: 0 0 20px rgba(22, 163, 74, 0.5);
         }
       `}</style>
 
       {/* Navigation */}
       <header
-        className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e1a]/95 backdrop-blur-xl border-b border-white/5 select-none"
+        className="fixed top-0 left-0 right-0 z-50 bg-[#18181b]/95 backdrop-blur-xl border-b border-white/5 select-none"
         style={{ paddingTop: 'env(safe-area-inset-top)' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to={createPageUrl('Home')} className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0066FF] to-[#D4AF37] flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-                <Trophy className="w-6 h-6 text-white" />
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-bold tracking-tight">ECCHFA</h1>
-                <p className="text-[14px] text-white/60 tracking-widest uppercase">Education City Community Housing</p>
-              </div>
-            </Link>
+            {/* Brand */}
+            <h1 className="text-2xl font-bold tracking-tight">ECCHFA</h1>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-1" aria-label="Primary">
@@ -72,7 +64,7 @@ export default function Layout({ children, currentPageName }) {
                     aria-current={isActive ? 'page' : undefined}
                     className={`relative px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-300 nav-glow ${
                       isActive
-                        ? 'text-slate-900 bg-white/10'
+                        ? 'text-slate-100 bg-white/10'
                         : 'text-white/60 hover:text-white hover:bg-white/5'
                     }`}
                   >
@@ -83,7 +75,7 @@ export default function Layout({ children, currentPageName }) {
                     {isActive && (
                       <motion.div
                         layoutId="activeNav"
-                        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-[#0066FF] to-[#D4AF37] rounded-full"
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-[#16a34a] to-[#22c55e] rounded-full"
                       />
                     )}
                   </Link>
@@ -113,7 +105,7 @@ export default function Layout({ children, currentPageName }) {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-white/5 bg-[#0a0e1a]/98 backdrop-blur-xl select-none"
+              className="md:hidden border-t border-white/5 bg-[#18181b]/98 backdrop-blur-xl select-none"
             >
               <nav className="px-4 py-4 space-y-1" aria-label="Mobile">
                 {navItems.map((item) => {
@@ -126,7 +118,7 @@ export default function Layout({ children, currentPageName }) {
                       aria-current={isActive ? 'page' : undefined}
                       className={`flex items-center justify-between p-4 rounded-xl transition-all ${
                         isActive
-                          ? 'bg-gradient-to-r from-[#0066FF]/20 to-transparent text-slate-900'
+                          ? 'bg-gradient-to-r from-[#16a34a]/20 to-transparent text-slate-100'
                           : 'text-white/60 hover:bg-white/5 hover:text-white'
                       }`}
                       style={{ minHeight: 44 }}
@@ -153,11 +145,11 @@ export default function Layout({ children, currentPageName }) {
       </main>
 
       {/* Footer */}
-      <footer className="hidden md:block bg-[#0a0e1a] border-t border-white/5 mt-20">
+      <footer className="hidden md:block bg-[#18181b] border-t border-white/5 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#0066FF] to-[#D4AF37] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#16a34a] to-[#22c55e] flex items-center justify-center">
                 <Trophy className="w-5 h-5 text-white" />
               </div>
               <div>

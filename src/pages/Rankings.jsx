@@ -25,8 +25,8 @@ export default function Rankings() {
     <div className="min-h-screen">
       {/* Header */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#D4AF37]/10 to-transparent" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#16a34a]/10 to-transparent" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#16a34a]/10 rounded-full blur-3xl" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -38,7 +38,7 @@ export default function Rankings() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-slate-900">Player Rankings</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold text-slate-100">Player Rankings</h1>
               <p className="text-white/50 mt-1">Overall Ratings • Season 2025/26</p>
             </div>
           </motion.div>
@@ -69,15 +69,15 @@ export default function Rankings() {
                 transition={{ delay: 0.2 }}
                 className="md:order-1 flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-[#C0C0C0]/20 to-transparent border border-[#C0C0C0]/30"
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] flex items-center justify-center text-3xl font-black text-[#0a0e1a] mb-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] flex items-center justify-center text-3xl font-black text-[#18181b] mb-4">
                   2
                 </div>
                 <div className="text-4xl mb-2">{topPlayers[1]?.nationality || '🌍'}</div>
-                <div className="text-lg font-bold text-slate-900 text-center">{topPlayers[1]?.name}</div>
+                <div className="text-lg font-bold text-slate-100 text-center">{topPlayers[1]?.name}</div>
                 <div className="text-sm text-white/40 mb-4">
                   {topPlayers[1]?.position?.includes('/') ? topPlayers[1]?.position.split('/')[1] : topPlayers[1]?.position}
                 </div>
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] flex items-center justify-center text-3xl font-black text-[#0a0e1a]">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] flex items-center justify-center text-3xl font-black text-[#18181b]">
                   {topPlayers[1]?.overall_rating || 0}
                 </div>
               </motion.div>
@@ -89,18 +89,18 @@ export default function Rankings() {
                 transition={{ delay: 0.15 }}
                 className="md:order-2 flex flex-col items-center p-8 rounded-2xl bg-gradient-to-br from-[#D4AF37]/30 to-transparent border-2 border-[#D4AF37] relative"
               >
-                <div className="absolute -top-4 bg-[#D4AF37] text-[#0a0e1a] px-4 py-1 rounded-full text-xs font-bold">
+                <div className="absolute -top-4 bg-[#D4AF37] text-[#18181b] px-4 py-1 rounded-full text-xs font-bold">
                   #1 RANKED
                 </div>
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#F0D060] flex items-center justify-center text-4xl font-black text-[#0a0e1a] mb-4 shadow-xl shadow-[#D4AF37]/50">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#F0D060] flex items-center justify-center text-4xl font-black text-[#18181b] mb-4 shadow-xl shadow-[#D4AF37]/50">
                   1
                 </div>
                 <div className="text-5xl mb-2">{topPlayers[0]?.nationality || '🌍'}</div>
-                <div className="text-2xl font-bold text-slate-900 text-center">{topPlayers[0]?.name}</div>
+                <div className="text-2xl font-bold text-slate-100 text-center">{topPlayers[0]?.name}</div>
                 <div className="text-sm text-white/50 mb-4">
                   {topPlayers[0]?.position?.includes('/') ? topPlayers[0]?.position.split('/')[1] : topPlayers[0]?.position}
                 </div>
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#F0D060] flex items-center justify-center text-4xl font-black text-[#0a0e1a] shadow-xl shadow-[#D4AF37]/50">
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#F0D060] flex items-center justify-center text-4xl font-black text-[#18181b] shadow-xl shadow-[#D4AF37]/50">
                   {topPlayers[0]?.overall_rating || 0}
                 </div>
               </motion.div>
@@ -112,15 +112,15 @@ export default function Rankings() {
                 transition={{ delay: 0.25 }}
                 className="md:order-3 flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-[#CD7F32]/20 to-transparent border border-[#CD7F32]/30"
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#CD7F32] to-[#E0965A] flex items-center justify-center text-3xl font-black text-[#0a0e1a] mb-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#CD7F32] to-[#E0965A] flex items-center justify-center text-3xl font-black text-[#18181b] mb-4">
                   3
                 </div>
                 <div className="text-4xl mb-2">{topPlayers[2]?.nationality || '🌍'}</div>
-                <div className="text-lg font-bold text-slate-900 text-center">{topPlayers[2]?.name}</div>
+                <div className="text-lg font-bold text-slate-100 text-center">{topPlayers[2]?.name}</div>
                 <div className="text-sm text-white/40 mb-4">
                   {topPlayers[2]?.position?.includes('/') ? topPlayers[2]?.position.split('/')[1] : topPlayers[2]?.position}
                 </div>
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#CD7F32] to-[#E0965A] flex items-center justify-center text-3xl font-black text-[#0a0e1a]">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#CD7F32] to-[#E0965A] flex items-center justify-center text-3xl font-black text-[#18181b]">
                   {topPlayers[2]?.overall_rating || 0}
                 </div>
               </motion.div>

@@ -76,7 +76,7 @@ export default function TeamRoster() {
   return (
     <div className="min-h-screen pb-20">
       <section className="relative py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0066FF]/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#16a34a]/10 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/MiniWorldCup"
@@ -98,7 +98,7 @@ export default function TeamRoster() {
               </div>
             )}
             <div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{teamName}</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold text-slate-100">{teamName}</h1>
               <p className="text-white/50 mt-1">Hexagon League • Team Roster</p>
             </div>
           </motion.div>
@@ -122,13 +122,13 @@ export default function TeamRoster() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="text-xl">{player.country}</span>
-                    <span className="text-slate-900 font-semibold text-lg">{player.name}</span>
+                    <span className="text-slate-100 font-semibold text-lg">{player.name}</span>
                   </div>
                   {player.role === 'captain' && (
                     <p className="text-xs text-[#D4AF37]/80 mt-0.5">Captain</p>
                   )}
                   {player.role === 'goalkeeper' && (
-                    <p className="text-xs text-[#0066FF]/80 mt-0.5">Goalkeeper</p>
+                    <p className="text-xs text-[#16a34a]/80 mt-0.5">Goalkeeper</p>
                   )}
                 </div>
               </motion.div>

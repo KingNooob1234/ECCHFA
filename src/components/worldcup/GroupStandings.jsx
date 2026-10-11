@@ -14,12 +14,12 @@ export default function GroupStandings({ data, showQualified = false, qualifiedP
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-6">Group Stage</h2>
+      <h2 className="text-2xl font-bold text-slate-100 mb-6">Group Stage</h2>
 
       {showQualified && (
         <div className="mb-6 flex items-center gap-3 text-sm">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#0066FF] rounded" />
+            <div className="w-6 h-6 bg-[#16a34a] rounded" />
             <span className="text-white/80">Qualified for next round</span>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function GroupStandings({ data, showQualified = false, qualifiedP
               transition={{ delay: groupNum * 0.1 }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
             >
-              <h3 className="text-lg font-bold text-slate-900 mb-4">Group {groupLabels[groupNum - 1]}</h3>
+              <h3 className="text-lg font-bold text-slate-100 mb-4">Group {groupLabels[groupNum - 1]}</h3>
 
               <div className="grid grid-cols-6 gap-2 px-3 py-2 bg-white/5 rounded-lg text-xs font-medium text-white/50 uppercase mb-2">
                 <div className="col-span-1">#</div>
@@ -60,7 +60,7 @@ export default function GroupStandings({ data, showQualified = false, qualifiedP
                   return (
                     <div key={idx} className="relative grid grid-cols-6 gap-2 px-3 py-2 rounded-lg hover:bg-white/5 text-sm">
                       {isQualified && (
-                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0066FF] rounded-l-lg" />
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#16a34a] rounded-l-lg" />
                       )}
                       <div className="text-white/60 font-bold">{idx + 1}</div>
                       <div className="col-span-2 flex items-center gap-1">

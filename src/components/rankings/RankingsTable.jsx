@@ -26,7 +26,7 @@ export default function RankingsTable({ teams, isLoading }) {
         3: 'from-[#CD7F32] to-[#E0965A]'
       };
       return (
-        <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${colors[position]} flex items-center justify-center text-sm font-bold text-[#0a0e1a]`}>
+        <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${colors[position]} flex items-center justify-center text-sm font-bold text-[#18181b]`}>
           {position}
         </div>
       );
@@ -52,7 +52,7 @@ export default function RankingsTable({ teams, isLoading }) {
     return (
       <div className="text-center py-20">
         <Shield className="w-16 h-16 text-white/20 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-slate-900 mb-2">No Teams Yet</h3>
+        <h3 className="text-xl font-semibold text-slate-100 mb-2">No Teams Yet</h3>
         <p className="text-white/50">Team data will appear here once added</p>
       </div>
     );
@@ -95,11 +95,11 @@ export default function RankingsTable({ teams, isLoading }) {
                 {team.logo_url ? (
                   <img src={team.logo_url} alt={team.name} className="w-8 h-8 rounded-lg object-cover" />
                 ) : (
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0066FF] to-[#0044CC] flex items-center justify-center text-xs font-bold">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#16a34a] to-[#15803d] flex items-center justify-center text-xs font-bold">
                     {team.name?.charAt(0)}
                   </div>
                 )}
-                <span className="font-medium text-slate-900 truncate">{team.name}</span>
+                <span className="font-medium text-slate-100 truncate">{team.name}</span>
               </div>
               <div className="hidden sm:flex col-span-1 items-center justify-center text-white/70">{team.played || 0}</div>
               <div className="hidden sm:flex col-span-1 items-center justify-center text-green-400">{team.won || 0}</div>
@@ -116,7 +116,7 @@ export default function RankingsTable({ teams, isLoading }) {
                 </span>
               </div>
               <div className="col-span-4 sm:col-span-1 flex items-center justify-center">
-                <span className="px-3 py-1 rounded-lg bg-[#0066FF]/20 text-[#0066FF] font-bold">
+                <span className="px-3 py-1 rounded-lg bg-[#16a34a]/20 text-[#16a34a] font-bold">
                   {team.points || 0}
                 </span>
               </div>

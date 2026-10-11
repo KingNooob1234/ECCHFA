@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function Leaderboard({ data }) {
   return (
     <div>
-      <h2 className="text-xl font-bold text-slate-900 mb-3">Final Standings</h2>
+      <h2 className="text-xl font-bold text-slate-100 mb-3">Final Standings</h2>
       
       <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
         <div className="divide-y divide-white/5">
@@ -20,9 +20,9 @@ export default function Leaderboard({ data }) {
             >
               <div className="flex items-center gap-3">
                 <div className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-sm ${
-                  player.position === 1 ? 'bg-gradient-to-br from-[#D4AF37] to-[#F0D060] text-[#0a0e1a]' :
-                  player.position === 2 ? 'bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] text-[#0a0e1a]' :
-                  player.position === 3 ? 'bg-gradient-to-br from-[#CD7F32] to-[#E0965A] text-[#0a0e1a]' :
+                  player.position === 1 ? 'bg-gradient-to-br from-[#D4AF37] to-[#F0D060] text-[#18181b]' :
+                  player.position === 2 ? 'bg-gradient-to-br from-[#C0C0C0] to-[#E0E0E0] text-[#18181b]' :
+                  player.position === 3 ? 'bg-gradient-to-br from-[#CD7F32] to-[#E0965A] text-[#18181b]' :
                   'bg-white/5 text-white/60'
                 }`}>
                   {player.position}
@@ -30,7 +30,7 @@ export default function Leaderboard({ data }) {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-base">{player.country}</span>
-                    <span className="text-slate-900 font-semibold text-sm">{player.name}</span>
+                    <span className="text-slate-100 font-semibold text-sm">{player.name}</span>
                     {player.medal && <span className="text-base ml-1">{player.medal}</span>}
                   </div>
                 </div>

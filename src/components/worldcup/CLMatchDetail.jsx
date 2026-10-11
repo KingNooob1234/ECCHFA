@@ -22,7 +22,7 @@ export default function CLMatchDetail({ match, onBack }) {
       {/* Match Header */}
       <div className="rounded-2xl bg-white/5 border border-white/10 overflow-hidden mb-6">
         <div className="px-6 pt-5 pb-2 flex items-center justify-between text-xs">
-          <span className="text-[#0066FF] font-semibold">Champions League · Semi Final</span>
+          <span className="text-[#16a34a] font-semibold">Champions League · Semi Final</span>
           <span className="text-white/40">Result coming soon</span>
         </div>
 
@@ -34,9 +34,9 @@ export default function CLMatchDetail({ match, onBack }) {
                 ? <img src={match.logo1} alt={match.team1} className="w-16 h-16 object-contain" style={{ mixBlendMode: 'screen' }} />
                 : <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-2xl">🏆</div>
               }
-              <span className="text-slate-900 font-bold text-center text-sm leading-tight">{match.team1}</span>
+              <span className="text-slate-100 font-bold text-center text-sm leading-tight">{match.team1}</span>
               {match.teamRating1 && (
-                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#0066FF]/20 border border-[#0066FF]/40 text-[#60a5fa]">
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#16a34a]/20 border border-[#16a34a]/40 text-[#4ade80]">
                   {match.teamRating1} OVR
                 </span>
               )}
@@ -44,11 +44,11 @@ export default function CLMatchDetail({ match, onBack }) {
 
             {/* Score */}
             <div className="flex items-center gap-3">
-              <span className="text-slate-900 text-5xl font-black">
+              <span className="text-slate-100 text-5xl font-black">
                 {match.score1 !== undefined ? match.score1 : '-'}
               </span>
               <span className="text-white/30 text-2xl font-bold">-</span>
-              <span className="text-slate-900 text-5xl font-black">
+              <span className="text-slate-100 text-5xl font-black">
                 {match.score2 !== undefined ? match.score2 : '-'}
               </span>
             </div>
@@ -59,9 +59,9 @@ export default function CLMatchDetail({ match, onBack }) {
                 ? <img src={match.logo2} alt={match.team2} className="w-16 h-16 object-contain" style={{ mixBlendMode: 'screen' }} />
                 : <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-2xl">🏆</div>
               }
-              <span className="text-slate-900 font-bold text-center text-sm leading-tight">{match.team2}</span>
+              <span className="text-slate-100 font-bold text-center text-sm leading-tight">{match.team2}</span>
               {match.teamRating2 && (
-                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#0066FF]/20 border border-[#0066FF]/40 text-[#60a5fa]">
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#16a34a]/20 border border-[#16a34a]/40 text-[#4ade80]">
                   {match.teamRating2} OVR
                 </span>
               )}

@@ -254,10 +254,10 @@ export default function HexagonLeague() {
             className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
           >
             <div className="flex items-center gap-3 p-5 border-b border-white/10">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-[#0066FF] to-[#004BB5]">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-[#16a34a] to-[#15803d]">
                 <Hexagon className="w-5 h-5 text-white" />
               </div>
-              <h2 className="text-xl font-bold text-slate-900">League Standings</h2>
+              <h2 className="text-xl font-bold text-slate-100">League Standings</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -289,7 +289,7 @@ export default function HexagonLeague() {
                           className="flex items-center gap-3 group"
                         >
                           <div className={`w-2 h-8 rounded-full bg-gradient-to-b ${row.color}`} />
-                          <span className="text-slate-900 font-medium group-hover:text-[#0066FF] transition-colors">{row.name}</span>
+                          <span className="text-slate-100 font-medium group-hover:text-[#16a34a] transition-colors">{row.name}</span>
                         </Link>
                       </td>
                       <td className="px-3 py-3 text-center text-white/60">{row.played}</td>
@@ -311,7 +311,7 @@ export default function HexagonLeague() {
 
           {/* Fixtures */}
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Fixtures</h2>
+            <h2 className="text-2xl font-bold text-slate-100 mb-6">Fixtures</h2>
             <div className="space-y-6">
               {matchdays.map((md) => (
                 <motion.div
@@ -321,9 +321,9 @@ export default function HexagonLeague() {
                   viewport={{ once: true }}
                   className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
                 >
-                  <div className="p-5 border-b border-white/10 bg-gradient-to-r from-[#0066FF]/10 to-transparent">
+                  <div className="p-5 border-b border-white/10 bg-gradient-to-r from-[#16a34a]/10 to-transparent">
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <h3 className="text-lg font-bold text-slate-900">Matchday {md.number}</h3>
+                      <h3 className="text-lg font-bold text-slate-100">Matchday {md.number}</h3>
                       <span className="text-sm text-white/50">{md.date} • {md.teams}</span>
                     </div>
                   </div>
@@ -343,13 +343,13 @@ export default function HexagonLeague() {
                           <div className="flex items-center gap-2 sm:gap-4">
                             {/* Home */}
                             <div className="flex items-center gap-2 flex-1 min-w-0 justify-end">
-                              <span className="text-slate-900 font-medium text-sm truncate">{m.home}</span>
+                              <span className="text-slate-100 font-medium text-sm truncate">{m.home}</span>
                               <TeamLogo teamName={m.home} teams={teams} className="w-6 h-6 shrink-0" />
                             </div>
                             {/* Score / VS */}
                             <div className="shrink-0 text-center min-w-[3rem]">
                               {hasData ? (
-                                <div className="text-slate-900 font-bold text-sm whitespace-nowrap">
+                                <div className="text-slate-100 font-bold text-sm whitespace-nowrap">
                                   {matchData[fixtureKey].score.home}-{matchData[fixtureKey].score.away}
                                 </div>
                               ) : (
@@ -359,7 +359,7 @@ export default function HexagonLeague() {
                             {/* Away */}
                             <div className="flex items-center gap-2 flex-1 min-w-0 justify-start">
                               <TeamLogo teamName={m.away} teams={teams} className="w-6 h-6 shrink-0" />
-                              <span className="text-slate-900 font-medium text-sm truncate">{m.away}</span>
+                              <span className="text-slate-100 font-medium text-sm truncate">{m.away}</span>
                             </div>
                           </div>
                         </button>

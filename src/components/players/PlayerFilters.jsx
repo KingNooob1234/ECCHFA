@@ -32,13 +32,13 @@ export default function PlayerFilters({
       <div className="flex flex-col gap-3 mb-8">
         {/* Search */}
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
           <Input
             type="text"
             placeholder="Search players..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="pl-12 h-12 bg-white/60 border-slate-300 text-slate-900 placeholder:text-slate-400 rounded-xl focus:border-[#0066FF] focus:ring-[#0066FF]/20"
+            className="pl-12 h-12 bg-white/5 border-white/10 text-slate-100 placeholder:text-white/40 rounded-xl focus:border-[#16a34a] focus:ring-[#16a34a]/20"
           />
         </div>
 
@@ -47,19 +47,19 @@ export default function PlayerFilters({
           <DrawerTrigger asChild>
             <Button
               variant="outline"
-              className="h-12 bg-white/60 border-slate-300 text-slate-900 rounded-xl justify-start gap-2 text-[14px]"
+              className="h-12 bg-white/5 border-white/10 text-slate-100 rounded-xl justify-start gap-2 text-[14px]"
             >
-              <ArrowDownWideNarrow className="w-4 h-4 text-slate-500" />
+              <ArrowDownWideNarrow className="w-4 h-4 text-white/50" />
               {sortLabel}
             </Button>
           </DrawerTrigger>
-          <DrawerContent className="bg-slate-100 border-slate-300 text-slate-900" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
+          <DrawerContent className="bg-[#242428] border-white/10 text-slate-100" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
             <DrawerHeader>
-              <DrawerTitle className="text-slate-900">Sort by</DrawerTitle>
+              <DrawerTitle className="text-slate-100">Sort by</DrawerTitle>
             </DrawerHeader>
             <div className="px-4 pb-6 space-y-6">
               <div>
-                <p className="text-slate-500 text-[14px] font-semibold mb-2">Sort by</p>
+                <p className="text-white/50 text-[14px] font-semibold mb-2">Sort by</p>
                 <div className="space-y-1">
                   {sortOptions.map((opt) => (
                     <button
@@ -67,20 +67,20 @@ export default function PlayerFilters({
                       onClick={() => setSortBy(opt.value)}
                       className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-[14px] transition-colors ${
                         sortBy === opt.value
-                          ? 'bg-[#0066FF]/20 text-slate-900'
-                          : 'text-slate-600 hover:bg-slate-200'
+                          ? 'bg-[#16a34a]/20 text-slate-100'
+                          : 'text-white/60 hover:bg-white/5'
                       }`}
                       style={{ minHeight: 44 }}
                     >
                       {opt.label}
-                      {sortBy === opt.value && <Check className="w-4 h-4 text-[#0066FF]" />}
+                      {sortBy === opt.value && <Check className="w-4 h-4 text-[#16a34a]" />}
                     </button>
                   ))}
                 </div>
               </div>
               <Button
                 onClick={() => setDrawerOpen(false)}
-                className="w-full h-12 bg-[#0066FF] hover:bg-[#004BB5] text-white rounded-xl text-[14px]"
+                className="w-full h-12 bg-[#16a34a] hover:bg-[#15803d] text-white rounded-xl text-[14px]"
               >
                 Apply
               </Button>
@@ -95,27 +95,27 @@ export default function PlayerFilters({
     <div className="flex flex-col sm:flex-row gap-4 mb-8">
       {/* Search */}
       <div className="relative flex-1">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
         <Input
           type="text"
           placeholder="Search players..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-12 h-12 bg-white/60 border-slate-300 text-slate-900 placeholder:text-slate-400 rounded-xl focus:border-[#0066FF] focus:ring-[#0066FF]/20"
+          className="pl-12 h-12 bg-white/5 border-white/10 text-slate-100 placeholder:text-white/40 rounded-xl focus:border-[#16a34a] focus:ring-[#16a34a]/20"
         />
       </div>
 
       {/* Sort */}
       <Select value={sortBy} onValueChange={setSortBy}>
-        <SelectTrigger className="w-full sm:w-48 h-12 bg-white/60 border-slate-300 text-slate-900 rounded-xl">
+        <SelectTrigger className="w-full sm:w-48 h-12 bg-white/5 border-white/10 text-slate-100 rounded-xl">
           <div className="flex items-center gap-2">
-            <ArrowDownWideNarrow className="w-4 h-4 text-slate-500" />
+            <ArrowDownWideNarrow className="w-4 h-4 text-white/50" />
             <SelectValue placeholder="Sort" />
           </div>
         </SelectTrigger>
-        <SelectContent className="bg-slate-100 border-slate-300">
+        <SelectContent className="bg-[#242428] border-white/10">
           {sortOptions.map((opt) => (
-            <SelectItem key={opt.value} value={opt.value} className="text-slate-900 hover:bg-slate-200">
+            <SelectItem key={opt.value} value={opt.value} className="text-slate-100 hover:bg-white/5">
               {opt.label}
             </SelectItem>
           ))}

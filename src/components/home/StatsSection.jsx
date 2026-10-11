@@ -45,8 +45,8 @@ export default function StatsSection() {
       title: 'Most POTMs',
       data: sortBy(ALL_PLAYERS, 'potms'),
       valueKey: 'potms',
-      icon: <Star className="w-5 h-5 mx-auto mb-1.5 text-[#0066FF]" />,
-      accent: 'text-[#0066FF]',
+      icon: <Star className="w-5 h-5 mx-auto mb-1.5 text-[#16a34a]" />,
+      accent: 'text-[#16a34a]',
     },
   ];
 
@@ -57,7 +57,7 @@ export default function StatsSection() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-4"
       >
-        <h2 className="text-xl font-bold text-slate-900 mb-1">Season Stats</h2>
+        <h2 className="text-xl font-bold text-slate-100 mb-1">Season Stats</h2>
         <p className="text-[14px] text-white/50">Top performers across key metrics</p>
       </motion.div>
 
@@ -96,7 +96,7 @@ export default function StatsSection() {
                     <>
                       <div className={`w-1 h-5 rounded-full bg-gradient-to-b ${player.teamColor} shrink-0`} />
                       <span className="text-base shrink-0">{player.nationality || '🌍'}</span>
-                      <span className="text-slate-900 text-[13px] sm:text-sm font-medium truncate flex-1">{player.name}</span>
+                      <span className="text-slate-100 text-[13px] sm:text-sm font-medium truncate flex-1">{player.name}</span>
                       <span className={`text-sm font-bold shrink-0 ${col.accent}`}>{player[col.valueKey] || 0}</span>
                     </>
                   ) : (

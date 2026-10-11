@@ -202,8 +202,8 @@ const tournaments = [
     id: 'elite-eight',
     name: 'Hexagon League',
     icon: Trophy,
-    color: 'from-[#0066FF] to-[#004BB5]',
-    glow: '#0066FF',
+    color: 'from-[#16a34a] to-[#15803d]',
+    glow: '#16a34a',
     available: true,
   },
   {
@@ -243,16 +243,16 @@ const faCupBracket = {
 function BracketMatch({ match, accent }) {
   return (
     <div className={`rounded-2xl border p-6 w-full max-w-md mx-auto ${accent === 'gold' ? 'bg-gradient-to-br from-[#D4AF37]/10 to-transparent border-[#D4AF37]/30' : 'bg-white/5 border-white/10'}`}>
-      <p className={`text-xs font-semibold uppercase tracking-wider mb-4 text-center ${accent === 'gold' ? 'text-[#D4AF37]' : 'text-[#0066FF]'}`}>{match.label}</p>
+      <p className={`text-xs font-semibold uppercase tracking-wider mb-4 text-center ${accent === 'gold' ? 'text-[#D4AF37]' : 'text-[#16a34a]'}`}>{match.label}</p>
       <div className="flex items-center justify-between gap-4">
         <div className="flex-1 flex flex-col items-center gap-2">
           <div className={`w-14 h-14 rounded-full flex items-center justify-center text-2xl ${accent === 'gold' ? 'bg-gradient-to-br from-[#D4AF37] to-[#B8952D] shadow-lg shadow-[#D4AF37]/30' : 'bg-white/10'}`}>🏆</div>
-          <span className="text-slate-900 font-semibold text-center text-sm">{match.team1}</span>
+          <span className="text-slate-100 font-semibold text-center text-sm">{match.team1}</span>
         </div>
         <span className={`font-bold text-sm px-4 py-2 rounded-lg border ${accent === 'gold' ? 'text-[#D4AF37] bg-[#D4AF37]/10 border-[#D4AF37]/30' : 'text-white/40 bg-white/5 border-white/10'}`}>VS</span>
         <div className="flex-1 flex flex-col items-center gap-2">
           <div className={`w-14 h-14 rounded-full flex items-center justify-center text-2xl ${accent === 'gold' ? 'bg-gradient-to-br from-[#D4AF37] to-[#B8952D] shadow-lg shadow-[#D4AF37]/30' : 'bg-white/10'}`}>🏆</div>
-          <span className="text-slate-900 font-semibold text-center text-sm">{match.team2}</span>
+          <span className="text-slate-100 font-semibold text-center text-sm">{match.team2}</span>
         </div>
       </div>
     </div>
@@ -262,7 +262,7 @@ function BracketMatch({ match, accent }) {
 function Connector() {
   return (
     <div className="flex justify-center">
-      <div className="w-1 h-16 bg-gradient-to-b from-[#0066FF]/60 via-[#D4AF37]/60 to-[#0066FF]/60 rounded-full" />
+      <div className="w-1 h-16 bg-gradient-to-b from-[#16a34a]/60 via-[#22c55e]/60 to-[#16a34a]/60 rounded-full" />
     </div>
   );
 }
@@ -301,15 +301,15 @@ export default function MiniWorldCup() {
     <div className="min-h-screen pb-20">
       {/* Header */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#D4AF37]/10 to-transparent" />
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#16a34a]/10 to-transparent" />
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-[#16a34a]/10 rounded-full blur-3xl" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-4 mb-6">
             <div className="p-4 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#B8952D]">
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-slate-900">Tournaments</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold text-slate-100">Tournaments</h1>
               <p className="text-white/50 mt-1">All Competitions • ECCHFA</p>
             </div>
           </motion.div>
@@ -339,7 +339,7 @@ export default function MiniWorldCup() {
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${t.color} flex items-center justify-center mb-3`}>
                   <Icon className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-slate-900 font-bold text-lg">{t.name}</p>
+                <p className="text-slate-100 font-bold text-lg">{t.name}</p>
                 {!t.available && (
                   <span className="text-xs text-white/40 mt-1 block">Data coming soon</span>
                 )}
@@ -382,11 +382,11 @@ export default function MiniWorldCup() {
               <GroupStage data={tournament2026Data.groupStage} matches={tournament2026Data.groupMatches} showQualified={true} qualifiedPlayers={['Muhammad', 'Ben']} />
               {/* Disciplinary Qualifying Match */}
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Disciplinary Qualifying Match</h3>
+                <h3 className="text-xl font-bold text-slate-100 mb-4">Disciplinary Qualifying Match</h3>
                 <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <div className="flex items-center justify-between">
                     <span className="text-white/80">Walid 🇩🇿</span>
-                    <span className="text-slate-900 font-bold px-3">1 - 2</span>
+                    <span className="text-slate-100 font-bold px-3">1 - 2</span>
                     <span className="text-white/80">Yazan 🇯🇴</span>
                   </div>
                 </div>
@@ -405,19 +405,19 @@ export default function MiniWorldCup() {
 
         {activeTournament === 'games-archive' && (
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Games Archive</h2>
+            <h2 className="text-2xl font-bold text-slate-100 mb-6">Games Archive</h2>
             {/* Match: Recent */}
             <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div className="flex-1">
-                  <p className="text-slate-900 font-bold text-sm mb-1">Team A</p>
+                  <p className="text-slate-100 font-bold text-sm mb-1">Team A</p>
                   <p className="text-white/60 text-xs">Rami, Elyes, Muhammad, Camrick</p>
                 </div>
                 <div className="text-center px-4">
-                  <span className="text-slate-900 font-black text-2xl">7 – 1</span>
+                  <span className="text-slate-100 font-black text-2xl">7 – 1</span>
                 </div>
                 <div className="flex-1 text-right">
-                  <p className="text-slate-900 font-bold text-sm mb-1">Team B</p>
+                  <p className="text-slate-100 font-bold text-sm mb-1">Team B</p>
                   <p className="text-white/60 text-xs">Walid, Amir, Seif, Ben</p>
                 </div>
               </div>
@@ -447,14 +447,14 @@ export default function MiniWorldCup() {
               <div className="text-xs text-white/40 mb-3">August 27, 2025</div>
               <div className="flex items-center justify-between gap-4 mb-4">
                 <div className="flex-1">
-                  <p className="text-slate-900 font-bold text-sm mb-1">Team A</p>
+                  <p className="text-slate-100 font-bold text-sm mb-1">Team A</p>
                   <p className="text-white/60 text-xs">Mazen, Rami, Muhammad, Sanad, Seif</p>
                 </div>
                 <div className="text-center px-4">
-                  <span className="text-slate-900 font-black text-2xl">4 – 3</span>
+                  <span className="text-slate-100 font-black text-2xl">4 – 3</span>
                 </div>
                 <div className="flex-1 text-right">
-                  <p className="text-slate-900 font-bold text-sm mb-1">Team B</p>
+                  <p className="text-slate-100 font-bold text-sm mb-1">Team B</p>
                   <p className="text-white/60 text-xs">Mohamede, Yazan, Ahmed, Amir</p>
                 </div>
               </div>

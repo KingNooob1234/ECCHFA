@@ -29,7 +29,7 @@ export default function PlayerProfile() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0066FF]" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#16a34a]" />
       </div>
     );
   }
@@ -39,8 +39,8 @@ export default function PlayerProfile() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <User className="w-16 h-16 text-white/20 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-slate-900 mb-2">Player Not Found</h3>
-          <Link to={createPageUrl('Players')} className="text-[#0066FF] hover:underline">
+          <h3 className="text-xl font-semibold text-slate-100 mb-2">Player Not Found</h3>
+          <Link to={createPageUrl('Players')} className="text-[#16a34a] hover:underline">
             Back to Players
           </Link>
         </div>
@@ -89,7 +89,7 @@ export default function PlayerProfile() {
                   className="w-48 h-48 rounded-full object-cover border-4 border-white/20 shadow-2xl"
                 />
               ) : (
-                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#1a1f36] to-[#252b45] border-4 border-white/20 flex items-center justify-center shadow-2xl">
+                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#242428] to-[#2e2e33] border-4 border-white/20 flex items-center justify-center shadow-2xl">
                   <User className="w-20 h-20 text-slate-400" />
                 </div>
               )}
@@ -111,7 +111,7 @@ export default function PlayerProfile() {
                 </span>
               </div>
 
-              <h1 className="text-5xl font-bold text-slate-900 mb-2">{player.name}</h1>
+              <h1 className="text-5xl font-bold text-slate-100 mb-2">{player.name}</h1>
               {player.last_name && (
                 <p className="text-xl text-white/60 mb-4">{player.last_name}</p>
               )}
@@ -150,13 +150,13 @@ export default function PlayerProfile() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="p-6 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-[#0066FF]/20 border border-white/10"
+              className="p-6 rounded-2xl bg-gradient-to-br from-[#22c55e]/20 to-[#16a34a]/20 border border-white/10"
             >
               <div className="flex items-center gap-2 text-sm text-white/60 mb-2">
                 <Target className="w-4 h-4" />
                 <span className="uppercase tracking-wider">Avg Goals/Game</span>
               </div>
-              <div className="text-4xl font-black text-slate-900">
+              <div className="text-4xl font-black text-slate-100">
                 {player.average_goals_per_game.toFixed(2)}
               </div>
             </motion.div>
@@ -168,13 +168,13 @@ export default function PlayerProfile() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="p-6 rounded-2xl bg-gradient-to-br from-[#0066FF]/20 to-[#0044CC]/20 border border-white/10"
+              className="p-6 rounded-2xl bg-gradient-to-br from-[#16a34a]/20 to-[#15803d]/20 border border-white/10"
             >
               <div className="flex items-center gap-2 text-sm text-white/60 mb-2">
                 <Trophy className="w-4 h-4" />
                 <span className="uppercase tracking-wider">Goalkeeper Save %</span>
               </div>
-              <div className="text-4xl font-black text-slate-900">
+              <div className="text-4xl font-black text-slate-100">
                 {player.goalkeeper_save_percentage}%
               </div>
             </motion.div>
@@ -192,7 +192,7 @@ export default function PlayerProfile() {
                 <AlertCircle className="w-4 h-4" />
                 <span className="uppercase tracking-wider">Chance of Clean Sheet</span>
               </div>
-              <div className="text-4xl font-black text-slate-900">
+              <div className="text-4xl font-black text-slate-100">
                 {player.clean_sheet_chance}%
               </div>
             </motion.div>

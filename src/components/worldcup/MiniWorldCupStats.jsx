@@ -29,8 +29,8 @@ export default function MiniWorldCupStats({ scorers, yellowCards, pointsLeaders 
     {
       title: 'Most Points',
       data: pointsLeaders,
-      icon: <Trophy className="w-5 h-5 mx-auto mb-1.5 text-[#0066FF]" />,
-      accent: 'text-[#0066FF]',
+      icon: <Trophy className="w-5 h-5 mx-auto mb-1.5 text-[#16a34a]" />,
+      accent: 'text-[#16a34a]',
     },
   ];
 
@@ -41,7 +41,7 @@ export default function MiniWorldCupStats({ scorers, yellowCards, pointsLeaders 
         animate={{ opacity: 1, y: 0 }}
         className="mb-4"
       >
-        <h2 className="text-xl font-bold text-slate-900 mb-1">Tournament Stats</h2>
+        <h2 className="text-xl font-bold text-slate-100 mb-1">Tournament Stats</h2>
         <p className="text-[14px] text-white/50">Top performers across key metrics</p>
       </motion.div>
 
@@ -77,7 +77,7 @@ export default function MiniWorldCupStats({ scorers, yellowCards, pointsLeaders 
                   {player ? (
                     <>
                       <span className="text-base shrink-0">{player.country || '🌍'}</span>
-                      <span className="text-slate-900 text-[13px] sm:text-sm font-medium truncate flex-1">{player.name}</span>
+                      <span className="text-slate-100 text-[13px] sm:text-sm font-medium truncate flex-1">{player.name}</span>
                       <span className={`text-sm font-bold shrink-0 ${col.accent}`}>{player.value}</span>
                     </>
                   ) : (

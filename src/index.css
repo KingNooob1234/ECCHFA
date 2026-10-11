@@ -84,7 +84,7 @@
 
   html, body {
     overscroll-behavior: none;
-    background-color: #0a0e1a;
+    background-color: #18181b;
   }
 
   body {
@@ -109,79 +109,18 @@ a,
   -webkit-user-select: none;
 }
 
-/* ===== Light Mode Overrides ===== */
-/* Unlayered CSS overrides Tailwind utilities (which live in @layer) */
-
-body {
-  background-color: #f1f5f9 !important;
-  color: #1e293b !important;
+/* Twemoji-rendered flags/emoji: size them like the surrounding text
+   instead of the image's native pixel size. */
+img.emoji {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em 0 0.05em;
+  vertical-align: -0.1em;
 }
 
-/* Dark backgrounds → light */
-.bg-\[\#0a0e1a\] { background-color: #f1f5f9 !important; }
-.bg-\[\#0a0e1a\]\/95 { background-color: rgba(241, 245, 249, 0.95) !important; }
-.bg-\[\#0a0e1a\]\/98 { background-color: rgba(241, 245, 249, 0.98) !important; }
-.bg-\[\#1a1f36\] { background-color: #e2e8f0 !important; }
-.bg-\[\#252b45\] { background-color: #cbd5e1 !important; }
-
-/* White-on-dark card backgrounds → white cards */
-.bg-white\/5 { background-color: rgba(255, 255, 255, 0.6) !important; }
-.bg-white\/8 { background-color: rgba(255, 255, 255, 0.7) !important; }
-.bg-white\/10 { background-color: rgba(255, 255, 255, 0.8) !important; }
-
-.bg-white\/\[0\.02\] { background-color: rgba(255, 255, 255, 0.4) !important; }
-
-/* Borders */
-.border-white\/5 { border-color: rgba(203, 213, 225, 0.4) !important; }
-.border-white\/10 { border-color: #cbd5e1 !important; }
-.border-white\/20 { border-color: #94a3b8 !important; }
-.border-white\/30 { border-color: #64748b !important; }
-.border-white\/70 { border-color: #cbd5e1 !important; }
-.border-\[\#0a0e1a\] { border-color: #e2e8f0 !important; }
-
-/* Muted text → dark slate */
-.text-white\/80 { color: #334155 !important; }
-.text-white\/70 { color: #475569 !important; }
-.text-white\/60 { color: #64748b !important; }
-.text-white\/50 { color: #94a3b8 !important; }
-.text-white\/40 { color: #94a3b8 !important; }
-.text-white\/30 { color: #cbd5e1 !important; }
-.text-white\/20 { color: #cbd5e1 !important; }
-.text-white\/10 { color: #e2e8f0 !important; }
-
-/* Hover backgrounds → subtle darkening on white */
-.hover\:bg-white\/5:hover { background-color: rgba(0, 0, 0, 0.03) !important; }
-.hover\:bg-white\/8:hover { background-color: rgba(0, 0, 0, 0.04) !important; }
-.hover\:bg-white\/10:hover { background-color: rgba(0, 0, 0, 0.05) !important; }
-.hover\:bg-white\/20:hover { background-color: rgba(0, 0, 0, 0.07) !important; }
-.hover\:bg-white\/30:hover { background-color: rgba(0, 0, 0, 0.1) !important; }
-
-/* Hover text → dark */
-.hover\:text-white:hover { color: #1e293b !important; }
-
-/* Hover borders */
-.hover\:border-white\/20:hover { border-color: #94a3b8 !important; }
-.hover\:border-white\/30:hover { border-color: #64748b !important; }
-
-/* Divide */
-.divide-white\/5 > * + * { border-color: rgba(203, 213, 225, 0.4) !important; }
-
-/* Placeholder */
-.placeholder\:text-white\/60::placeholder { color: #94a3b8 !important; }
-
-/* Ring offset */
-.ring-offset-\[\#0a0e1a\] { --tw-ring-offset-color: #f1f5f9 !important; }
-
-/* Gradient stops */
-.from-white\/5 { --tw-gradient-from: rgba(255, 255, 255, 0.6) var(--tw-gradient-from-position) !important; }
-.to-white\/\[0\.02\] { --tw-gradient-to: rgba(255, 255, 255, 0.4) var(--tw-gradient-to-position) !important; }
-.from-\[\#1a1f36\] { --tw-gradient-from: #e2e8f0 var(--tw-gradient-from-position) !important; }
-.to-\[\#252b45\] { --tw-gradient-to: #cbd5e1 var(--tw-gradient-to-position) !important; }
-.from-\[\#0a0e1a\] { --tw-gradient-from: #f1f5f9 var(--tw-gradient-from-position) !important; }
-
-/* Gradient text (keep gold gradient visible on light bg) */
 .gradient-text {
-  background: linear-gradient(135deg, #1e293b 0%, #D4AF37 50%, #1e293b 100%);
+  background: linear-gradient(135deg, #fff 0%, #22c55e 50%, #fff 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

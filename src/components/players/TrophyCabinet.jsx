@@ -37,7 +37,7 @@ const trophyData = {
       name: 'Mini World Cup',
       count: 1,
       years: ['2024'],
-      color: 'from-[#0066FF] to-[#004BB5]',
+      color: 'from-[#16a34a] to-[#15803d]',
       icon: 'trophy',
       priority: 1,
     },
@@ -256,7 +256,7 @@ export default function TrophyCabinet({ playerName }) {
     <div className="mb-12">
       <div className="flex items-center gap-3 mb-6">
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-        <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
           <Trophy className="w-6 h-6 text-[#D4AF37]" />
           Trophy Cabinet
         </h2>
@@ -289,7 +289,7 @@ export default function TrophyCabinet({ playerName }) {
                   <Trophy className="w-8 h-8 text-white" />
                 )}
               </div>
-              <p className="text-slate-900 font-bold text-sm mb-1">{trophy.name}</p>
+              <p className="text-slate-100 font-bold text-sm mb-1">{trophy.name}</p>
               {trophy.count > 1 && (
                 <p className="text-[#D4AF37] font-black text-lg mb-2">×{trophy.count}</p>
               )}

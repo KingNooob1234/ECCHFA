@@ -37,8 +37,8 @@ export default function Players() {
     <div className="min-h-screen">
       {/* Header */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#D4AF37]/5 to-transparent" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#16a34a]/5 to-transparent" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#16a34a]/5 rounded-full blur-3xl" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -46,11 +46,11 @@ export default function Players() {
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-4 mb-6"
           >
-            <div className="p-4 rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#0044CC]">
+            <div className="p-4 rounded-2xl bg-gradient-to-br from-[#16a34a] to-[#15803d]">
               <Users className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-slate-900">Player Statistics</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold text-slate-100">Player Statistics</h1>
               <p className="text-white/50 mt-1">{players.length} registered players</p>
             </div>
           </motion.div>
@@ -79,7 +79,7 @@ export default function Players() {
               ) : filteredPlayers.length === 0 ? (
                 <div className="text-center py-20">
                   <User className="w-16 h-16 text-white/20 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">No Players Found</h3>
+                  <h3 className="text-xl font-semibold text-slate-100 mb-2">No Players Found</h3>
                   <p className="text-white/50">
                     {players.length === 0 
                       ? 'Player data will appear here once added' 

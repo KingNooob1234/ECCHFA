@@ -24,7 +24,7 @@ export default function MobileTabBar() {
   return (
     <nav
       aria-label="Primary"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#18181b]/95 backdrop-blur-xl border-t border-white/10 select-none"
+      className="hidden sm:block lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#18181b]/95 backdrop-blur-xl border-t border-white/10 select-none"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
       <div className="flex items-stretch justify-around">

@@ -15,12 +15,12 @@ export default function GroupStage({ data, matches, showQualified = false, quali
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-6">Group Stage</h2>
+      <h2 className="text-2xl font-bold text-slate-100 mb-6">Group Stage</h2>
       
       {showQualified && (
         <div className="mb-6 flex items-center gap-3 text-sm">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#0066FF] rounded" />
+            <div className="w-6 h-6 bg-[#16a34a] rounded" />
             <span className="text-white/80">Qualified for next round</span>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function GroupStage({ data, matches, showQualified = false, quali
               transition={{ delay: groupNum * 0.1 }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
             >
-              <h3 className="text-lg font-bold text-slate-900 mb-4">Group {groupLabels[groupNum - 1]}</h3>
+              <h3 className="text-lg font-bold text-slate-100 mb-4">Group {groupLabels[groupNum - 1]}</h3>
               
               {/* Table */}
               <div className="mb-4">
@@ -64,7 +64,7 @@ export default function GroupStage({ data, matches, showQualified = false, quali
                     return (
                       <div key={idx} className="relative grid grid-cols-6 gap-2 px-3 py-2 rounded-lg hover:bg-white/5 text-sm">
                         {isQualified && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0066FF] rounded-l-lg" />
+                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#16a34a] rounded-l-lg" />
                         )}
                         <div className="text-white/60 font-bold">{idx + 1}</div>
                         <div className="col-span-2 flex items-center gap-1">
@@ -91,7 +91,7 @@ export default function GroupStage({ data, matches, showQualified = false, quali
                   <div key={idx} className="text-sm">
                     <div className="flex items-center justify-between">
                       <span className="text-white/60">{match.team1}</span>
-                      <span className="text-slate-900 font-bold px-2">{match.score1} - {match.score2}</span>
+                      <span className="text-slate-100 font-bold px-2">{match.score1} - {match.score2}</span>
                       <span className="text-white/60">{match.team2}</span>
                     </div>
                     {match.note && (

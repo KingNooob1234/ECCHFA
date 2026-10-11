@@ -74,11 +74,11 @@ export default function PullToRefresh({ children }) {
             animate={{ rotate: refreshing ? 360 : 0 }}
             transition={{ duration: refreshing ? 0.8 : 0, repeat: refreshing ? Infinity : 0, ease: 'linear' }}
             className={`w-9 h-9 rounded-full flex items-center justify-center border ${
-              refreshing ? 'border-[#0066FF] bg-[#0066FF]/10' : 'border-white/20 bg-white/5'
+              refreshing ? 'border-[#16a34a] bg-[#16a34a]/10' : 'border-white/20 bg-white/5'
             }`}
           >
             {refreshing ? (
-              <Loader2 className="w-5 h-5 text-[#0066FF] animate-spin" />
+              <Loader2 className="w-5 h-5 text-[#16a34a] animate-spin" />
             ) : (
               <RefreshCw className="w-5 h-5 text-white/60" style={{ opacity: progress }} />
             )}

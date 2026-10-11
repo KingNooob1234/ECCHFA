@@ -15,8 +15,8 @@ export default function HeroSection() {
             backgroundImage: 'url(https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1920&q=80)',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0e1a] via-[#0a0e1a]/95 to-[#0a0e1a]/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#18181b] via-[#18181b]/95 to-[#18181b]/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#18181b] via-transparent to-transparent" />
         
         {/* Animated gradient orbs */}
         <motion.div
@@ -25,7 +25,7 @@ export default function HeroSection() {
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#0066FF]/20 rounded-full blur-3xl"
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#16a34a]/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -33,7 +33,7 @@ export default function HeroSection() {
             opacity: [0.2, 0.4, 0.2],
           }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-[#D4AF37]/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-[#22c55e]/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -47,7 +47,7 @@ export default function HeroSection() {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
             <span className="block">Education City</span>
-            <span className="block bg-gradient-to-r from-[#0066FF] via-[#D4AF37] to-[#0066FF] bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#22c55e] to-[#16a34a] bg-clip-text text-transparent">
               Football League
             </span>
           </motion.h1>
@@ -60,14 +60,14 @@ export default function HeroSection() {
           >
             <Link
               to={createPageUrl('Rankings')}
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#0066FF] to-[#0055DD] rounded-xl font-semibold text-white shadow-lg shadow-[#0066FF]/25 hover:shadow-[#0066FF]/40 transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#16a34a] to-[#15803d] rounded-xl font-semibold text-white shadow-lg shadow-[#16a34a]/25 hover:shadow-[#16a34a]/40 transition-all duration-300 hover:scale-105"
             >
               View Rankings
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to={createPageUrl('Players')}
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl font-semibold text-slate-900 hover:bg-white/20 transition-all duration-300"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl font-semibold text-slate-100 hover:bg-white/20 transition-all duration-300"
             >
               <Play className="w-5 h-5" />
               Explore Players

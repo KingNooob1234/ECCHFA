@@ -53,7 +53,7 @@ export default function CountdownTimer() {
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="rounded-2xl border border-white/10 bg-gradient-to-r from-[#0066FF]/10 via-[#D4AF37]/10 to-[#0066FF]/10 backdrop-blur-sm px-5 py-4"
+      className="rounded-2xl border border-white/10 bg-gradient-to-r from-[#16a34a]/10 via-[#22c55e]/10 to-[#16a34a]/10 backdrop-blur-sm px-5 py-4"
     >
       <p className="text-center text-[14px] font-semibold uppercase tracking-widest text-white/60 mb-3">
         {time.done ? 'Hexagon League has started' : 'Hexagon League kicks off in'}
@@ -62,7 +62,7 @@ export default function CountdownTimer() {
         {units.map((u, i) => (
           <div key={u.key} className="flex items-center gap-3 sm:gap-5">
             <div className="flex flex-col items-center">
-              <span className="text-2xl sm:text-4xl font-black text-slate-900 tabular-nums leading-none">
+              <span className="text-2xl sm:text-4xl font-black text-slate-100 tabular-nums leading-none">
                 {String(time[u.key]).padStart(2, '0')}
               </span>
               <span className="text-[14px] sm:text-sm uppercase tracking-wider text-white/60 mt-1">{u.label}</span>

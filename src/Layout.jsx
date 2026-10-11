@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from './utils';
-import { Menu, X, Trophy, Users, Home, ChevronRight, Settings } from 'lucide-react';
+import { Menu, X, Trophy, Users, Home, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MobileTabBar from './components/MobileTabBar';
 
@@ -89,14 +89,6 @@ export default function Layout({ children, currentPageName }) {
                   </Link>
                 );
               })}
-              <Link
-                to={createPageUrl('Account')}
-                aria-label="Account settings"
-                className="relative p-2.5 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300"
-                style={{ minHeight: 44, minWidth: 44 }}
-              >
-                <Settings className="w-5 h-5" />
-              </Link>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -147,18 +139,6 @@ export default function Layout({ children, currentPageName }) {
                     </Link>
                   );
                 })}
-                <Link
-                  to={createPageUrl('Account')}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-between p-4 rounded-xl text-white/60 hover:bg-white/5 hover:text-white transition-all"
-                  style={{ minHeight: 44 }}
-                >
-                  <span className="flex items-center gap-3">
-                    <Settings className="w-5 h-5" />
-                    Settings
-                  </span>
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
               </nav>
             </motion.div>
           )}

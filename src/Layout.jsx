@@ -50,15 +50,8 @@ export default function Layout({ children, currentPageName }) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to={createPageUrl('Home')} className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#16a34a] to-[#22c55e] flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-                <Trophy className="w-6 h-6 text-white" />
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-2xl font-bold tracking-tight">ECCHFA</h1>
-              </div>
-            </Link>
+            {/* Brand */}
+            <h1 className="text-2xl font-bold tracking-tight">ECCHFA</h1>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-1" aria-label="Primary">

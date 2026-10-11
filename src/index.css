@@ -109,6 +109,16 @@ a,
   -webkit-user-select: none;
 }
 
+/* Twemoji-rendered flags/emoji: size them like the surrounding text
+   instead of the image's native pixel size. */
+img.emoji {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em 0 0.05em;
+  vertical-align: -0.1em;
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #fff 0%, #22c55e 50%, #fff 100%);
   background-size: 200% auto;

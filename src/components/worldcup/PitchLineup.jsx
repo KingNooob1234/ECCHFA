@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { base44 } from '@/api/base44Client';
+import { listPlayers } from '@/data/players';
 import { useQuery } from '@tanstack/react-query';
 import { createPageUrl } from '@/utils';
 
@@ -54,7 +54,7 @@ export default function PitchLineup({ teamName, lineup, teamRating, logo }) {
 
   const { data: players = [] } = useQuery({
     queryKey: ['players-for-lineup'],
-    queryFn: () => base44.entities.Player.list(),
+    queryFn: () => listPlayers(),
   });
 
   const getPlayerId = (name) => {

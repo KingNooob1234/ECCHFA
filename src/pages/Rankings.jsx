@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { listPlayers } from '@/data/players';
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { Trophy, Award, Medal } from 'lucide-react';
@@ -8,7 +8,7 @@ import PlayerRankingsTable from '../components/rankings/PlayerRankingsTable';
 export default function Rankings() {
   const { data: players = [], isLoading } = useQuery({
     queryKey: ['players'],
-    queryFn: () => base44.entities.Player.list('-overall_rating', 100),
+    queryFn: () => listPlayers('-overall_rating', 100),
   });
 
   // Top 3 based on manual ranking (rank 1 = highest rated non-manually-ranked, rank 2 = Rami, rank 3 = Miles)

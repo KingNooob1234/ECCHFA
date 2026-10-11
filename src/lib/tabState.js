@@ -10,7 +10,6 @@ export const ROUTE_TO_TAB = {
   PlayerProfile: 'Players',
   MiniWorldCup: 'MiniWorldCup',
   TeamRoster: 'MiniWorldCup',
-  Account: 'Account',
 };
 
 const STORAGE_PREFIX = 'ecchfa_tab_state_';

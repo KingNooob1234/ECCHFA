@@ -1,3 +1,3 @@
-<<<<<<< HEAD
+
 This is the home of Education City Community Housing Football Association
-https://www.taynazdev.github.io/ECCHFA
+https://taynazdev.github.io/ECCHFA/
